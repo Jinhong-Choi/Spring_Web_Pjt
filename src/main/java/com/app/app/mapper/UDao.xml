@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC  "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.app.Dao.UDao">
+	<insert parameterType="map" id="Register">
+		INSERT INTO
+			USER (user_id, password, nickname, name)
+			VALUES(#{user_id}, #{password}, #{nickname}, #{name})
+	</insert>
+	<select parameterType="String" id="Id_Check" resultType="com.app.app.Dto.UserDto">
+		SELECT user_id FROM user where user_id = #{id}
+	</select>
+	<select parameterType="Map" id="Login" resultType="com.app.app.Dto.UserDto">
+		SELECT user_id FROM user WHERE user_id = #{id} AND password = #{password}
+	</select>
+ </mapper>
