@@ -26,11 +26,6 @@
 		</c:if>
 			<td colspan="2" align="center" width="250"><a href="Register">회원가입</a></td>
 		</tr>
-		
-		
-		
-		
-		
 	</table>
 </body>
 </html>
